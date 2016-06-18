@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install PUBLIC "-//Joomla! 3.5//DTD template 1.0//EN" "https://www.joomla.org/xml/dtd/3.5/template-install.dtd">
+<extension version="3.5" type="module" client="site" method="upgrade">
+<name>Offline Site</name>
+<version>1.0</version>
+<creationDate>Maggio 2016</creationDate>
+<author>Ahmad Nazha</author>
+<authorEmail>ahmad.nazha@libero.it</authorEmail>
+<copyright>JoomlaSaver 2013</copyright>
+<description>
+<![CDATA[
+<div class="row well">
+        <div class="span2 center" >
+		   <img src="http://img287.imagevenue.com/loc469/th_262885471_mia_122_469lo.jpg" border="0" class="img-thumbnail">
+        </div>
+        
+        <div class="span8">
+            <h3><span class="col-sm-6">Ing Nazha Ahmad</span></h3>
+            <h6> <span>Module Name:</span>&nbsp;Offline site countdown</h6>
+            <h6>Visit my <a href="https://www.facebook.com/ahmad.nazha.56">Facebook</a></h6>
+            <h6><span>version:&nbsp;1.0</span></h6>
+            <h6><span>Date:</span>&nbsp;18/06/2016</h6>
+            <h6><span class="badge">Email:</span>&nbsp;<a href="mailto:ahmad.nazha@libero.it">ahmad.nazha@libero.it</a></h6>
+ 
+        </div>
+        
+        
+  </div>
+]]>
+</description>	
+	<files>
+		<filename module="mod_offline_site_countdown">mod_offline_site_countdown.php</filename>
+		<folder>css</folder>
+		<folder>js</folder>
+		<folder>php</folder>
+		<folder>tmpl</folder>
+		<folder>img</folder>
+		<filename>helper.php</filename>
+		<filename>index.html</filename>
+		<filename>mod_offline_site_countdown.xml</filename>
+	</files>
+	<config>
+		<fields name="params" addfieldpath="/modules/mod_offline_site_countdown/php">
+			<fieldset name="basic">
+			<field name="jQuery" type="list" default="0" label="jQuery" description="Enable or Disable the latest jQuery version. Make sure that jQuery is loaded only once on your website.">
+				<option value="0">Disable</option>
+				<option	value="1">Enable</option>
+			</field>	
+			<field name="backgroundcolor" type="jscolor" default="#3498DB" label="backgroundcolor" description=" background wrapper color " />
+			<field name="enableBackgroundColor" type="list" default="0" label="BackGroundColor" description="Enable or Disable background wrapper color ">
+				<option value="0">Disable</option>
+				<option	value="1">Enable</option>
+			</field>
+			<field name="logo" type="media" label="Site logo" description="Select site logo" />		
+			<field name="siteName" type="text" filter="safehtml" default="example.com" cols="10" rows="1" label="Site Name" description="Name of site" />	
+			
+			<field name="endDate" type="text" filter="safehtml" cols="10" rows="1" label="End date" default="2016-06-20 09:00" description="insert date/time end maintenance like this format example 2016-06-20 09:00" />	
+			<field name="timeZone" type="text" filter="safehtml" cols="10" rows="1" label="Time Zone" default="Europe/Rome" description="timeZone city please check moment-timezone-with-data.js file on js folder for available values" />				
+			<field name="defaultSubMessage" type="textarea" filter="safehtml" default="and should be back online in a few minutes..." cols="50" rows="5" label=" defaultSubMessage" description="default SubMessage it will be displayed only if end date is less current date"  />				
+			<field name="titleMsg" type="textarea" filter="safehtml" cols="50" rows="5" default ="We'll be back soon!" label="title message" description=""  />		
+			<field name="desriptionPart1" type="textarea" filter="safehtml" cols="50" rows="5" default ="We are busy improving our website," label="desription Part1" description=" same line description part1"  />				
+			<field name="desriptionPart2" type="textarea" filter="safehtml" cols="50" rows="5" default ="and should be back online in:" label="desription Part2" description=" same line description of description part1"  />				
+
+			
+			<field type="asset" />
+			</fieldset>
+		
+		</fields>
+	</config>
+</extension>
